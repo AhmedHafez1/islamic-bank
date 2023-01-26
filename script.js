@@ -31,3 +31,21 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+const message = document.createElement('div');
+
+message.innerHTML =
+  'Helloooooooooooooooooooo <button class="btn btn-delete"> Delete </button>';
+message.classList.add('cookie-message');
+
+const header = document.querySelector('header');
+
+header.before(message);
+
+const deleteBtn = document.querySelector('.btn-delete');
+
+const removeMessage = () => {
+  message.remove();
+};
+
+deleteBtn.addEventListener('click', removeMessage);
