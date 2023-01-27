@@ -32,15 +32,18 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-const message = document.createElement('div');
+const message = document.createElement('h1');
+const re = document.createElement('h2');
 
 message.innerHTML =
   'Helloooooooooooooooooooo <button class="btn btn-delete"> Delete </button>';
-message.classList.add('cookie-message');
 
-const header = document.querySelector('header');
+re.textContent = 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH';
+
+const header = document.querySelector('.header');
 
 header.before(message);
+header.before(re);
 
 const deleteBtn = document.querySelector('.btn-delete');
 
@@ -49,3 +52,9 @@ const removeMessage = () => {
 };
 
 deleteBtn.addEventListener('click', removeMessage);
+
+message.style.backgroundColor = 'yellow';
+
+message.style.height = '100px';
+
+document.documentElement.style.setProperty('--color-primary', 'magenta');
