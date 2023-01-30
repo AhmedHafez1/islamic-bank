@@ -58,3 +58,11 @@ message.style.backgroundColor = 'yellow';
 message.style.height = '100px';
 
 document.documentElement.style.setProperty('--color-primary', 'magenta');
+
+const learnScrollBtn = document.querySelector('.btn--scroll-to');
+
+const section1 = document.getElementById('section--1');
+
+learnScrollBtn.addEventListener('click', () => {
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
