@@ -66,3 +66,8 @@ const section1 = document.getElementById('section--1');
 learnScrollBtn.addEventListener('click', () => {
   section1.scrollIntoView({ behavior: 'smooth' });
 });
+
+window.addEventListener('beforeunload', e => {
+  e.preventDefault();
+  e.returnValue = '';
+});
